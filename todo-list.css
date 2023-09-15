@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    color: white;
+  }
+
+  body {
+    background: black;
+  }
+  
+
+  main {
+    min-height: calc(100vh - 80px);
+    background: #ffffff;
+    border-radius: auto;
+    padding: 40px;
+    display: flex;
+  }
+
+  input[type="submit"] {
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    color: white;
+    background: black;
+    font-weight: bold;
+  }
+
+
+  .urgent {
+    background: black;
+    color: red;
+  }
+
+  #folders {
+    flex: 4;
+    margin-right: 24px;
+    height: 20%;
+    border-color: black;
+    
+  }
+
+  .folder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcfcfc;
+    border-radius: 8px;
+    padding: 16px 24px;
+    color: #7b7b7b;
+    margin-bottom: 24px;
+  }
+  
+  .folder.active {
+    background: black;
+    color: white;
+    box-shadow: 0px 5px 10px #91a9ff;
+  }
+  .folder.active:hover {
+    border: none;
+  }
+  .folder:hover {
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  #tasks {
+    flex: 8;
+  }
+  
+  .card {
+    background: white;
+    box-shadow: 0px 10px 20px rgba(64, 68,201, 0.2);
+    border-radius: 24px;
+    padding: 28px;
+    border-color: black;
+  }
+  
+
+  .task {
+    display: flex;
+    background: #fcfcfc;
+    padding: 16px 18px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border-color: black;
+  }
+  
+  .task-name {
+    flex: 8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .task-info {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .task-info > * {
+    margin-left: 20px;
+    font-size: 12px;
+  }
+  .task-info > p {
+    margin: auto;
+    color: black;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 100%;
+    border: black;
+    border-color: black;
+  }
+  input[type="text"] {
+    flex: 1;
+
+  }
+  input[type="text"],
+  input[type="date"],
+  select {
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 0 24px;
+    
+  }
+  
+ 
+  
+  input[type="submit"]:hover {
+    box-shadow: 0px 5px 10px #91a9ff;
+  }
+  
+  #tasks input[type="submit"] {
+    width: 40px;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    margin: auto;
+    padding: 36px;
+    background-color: white;
+  }

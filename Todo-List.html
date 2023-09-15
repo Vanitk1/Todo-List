@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>THINGS TO DO!</title>
+    <link href="todo-list" rel="stylesheet">
+    <link rel="stylesheet" href="todo-list.css">
+    <h1>THINGS TO DO!</h1>
+</head>
+
+<body>
+  <div id="conhainer">
+    <main>
+      <div id="folders">
+        <form id="form-folder">
+          <input
+            type="text"
+            name="folder-name"
+            id="folder-name"
+            placeholder="Add folder"
+          />
+          <input type="submit" value="New Project" />
+        </form>
+        <div class="card"></div>
+      </div>
+      <div id="tasks" class="card">
+       <form id="form-task">
+        <input
+          type="text"
+          name="task-name"
+          id="task-name"
+          placeholder="Add task"
+        />
+        <input type="date" name="task-date" id="task-date" />
+        <select name="task-priority" id="task-priority">
+          <option value="urgent">Urgent</option>
+          <option value="trivial">Trivial</option>
+        </select>
+        <input type="submit" value="Add" />
+      </form>
+      <div id="task-container"></div>
+    </div>
+  </main>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <form id="form-task-edit">
+        <input
+          type="text"
+          name="task-name"
+          id="task-name-edit"
+          placeholder="Your task"
+        />
+        <input type="date" name="task-date" id="task-date-edit" />
+        <select name="task-priority" id="task-priority-edit">
+          <option value="urgent">Urgent</option>
+          <option value="trivial">Trivial</option>
+        </select>
+        <input type="submit" value="Save" />
+      </form>
+    </div>
+</div>
+<script src="todo-list.js"></script>
+</body>
+</div>
+</html>
