@@ -35,6 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   formTask.addEventListener("submit", function(event) {
       event.preventDefault();
+
+      if(!currentFolder) {
+        alert("You must select a folder before adding a task.");
+        return;
+      }
       
       const taskNameInput = document.getElementById("task-name");
       const taskDateInput = document.getElementById("task-date");
@@ -141,4 +146,5 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
 
