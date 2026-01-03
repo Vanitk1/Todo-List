@@ -10,6 +10,7 @@
     font-size: 50px;
     text-decoration: underline;
     color: white;
+    margin-bottom: 20px;
   }
 
   body {
@@ -24,6 +25,8 @@
     padding: 40px;
     display: flex;
   }
+  
+
 
   input[type="submit"] {
     border: none;
@@ -44,33 +47,48 @@
     flex: 4;
     margin-right: 24px;
     height: 20%;
-    border-color: black;
     
   }
 
-  .folder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fcfcfc;
-    border-radius: 8px;
-    padding: 16px 24px;
-    color: #7b7b7b;
-    margin-bottom: 24px;
-  }
+.folder {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px 24px;
+  background: #fcfcfc;
+  color: black;
+  margin-bottom: 0;
+  margin-top: 10px;
+  transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
   
   .folder.active {
     background: black;
     color: white;
     box-shadow: 0px 5px 10px #91a9ff;
+    border-color: black;
   }
+
   .folder.active:hover {
-    border: none;
+    color: white;
+    box-shadow: 0px 5px 10px #91a9ff;
+    border-color: black;
   }
+  
   .folder:hover {
-    border: 1px solid black;
     cursor: pointer;
+    box-shadow: 0px 5px 10px #91a9ff;
+    background: #cfe8ff;
+    border-color: #2f6fed;        
+    transform: translateY(-2px);
   }
+  
+  #folder-container {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
   
   #tasks {
     flex: 8;
@@ -82,6 +100,7 @@
     border-radius: 24px;
     padding: 28px;
     border-color: black;
+    border-style: solid;
   }
   
 
@@ -94,7 +113,34 @@
     border-radius: 8px;
     margin-bottom: 24px;
     border-color: black;
+    border: 1px solid black;
   }
+
+  .task .delete-task,
+  .task .edit-task {
+    display: flex;
+    background: #fcfcfc;
+    padding: 6px 10px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    border-color: black;
+    border: 1px solid black;
+}
+
+.task .delete-task:hover,
+.task .edit-task:hover {
+  background: #cfe8ff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+.task .delete-task:active,
+.task .edit-task:active {
+  transform: translateY(0px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+}
   
   .task-name {
     flex: 8;
@@ -124,40 +170,58 @@
     border: black;
     border-color: black;
   }
+
   input[type="text"] {
     flex: 1;
-
   }
+
+  input[type="submit"] {
+  border: none;
+  border-radius: 12px;
+  height: 44px;        
+  padding: 0 18px;       
+  line-height: 44px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  }
+
+  input[placeholder="Add folder"] {
+    padding-left: 10px;
+  }
+
+  input[placeholder="Add task"] {
+    padding-left: 10px;
+  }
+
+
   input[type="text"],
   input[type="date"],
   select {
     border: none;
-    border-bottom: 2px solid black;
     margin: 0 24px;
-    
+    border-color: black;
+    border-style: solid;
+    font-size: 18px;
+    margin-right: 10px;
   }
-  
- 
   
   input[type="submit"]:hover {
-    box-shadow: 0px 5px 10px #91a9ff;
-  }
-  
-  #tasks input[type="submit"] {
-    width: 40px;
+    box-shadow: 0px 5px 10px black;
   }
 
   .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
   }
   
   .modal-content {
