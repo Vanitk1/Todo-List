@@ -2,6 +2,10 @@
 
 A simple folders + tasks web app built with vanilla HTML, CSS, and JavaScript. Create folders, select one, and add tasks with a date and priority. Tasks can be edited or deleted.
 
+# Live Demo
+
+https://vanitk1.github.io/Todo-List/
+
 ## Features
 
 - Create folders
